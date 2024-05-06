@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Abstracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3c00477a3f0ff9c8a51d4dfb980816afe6fbda9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Abstracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Abstracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

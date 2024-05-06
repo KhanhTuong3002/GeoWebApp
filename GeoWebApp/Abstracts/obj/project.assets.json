@@ -607,11 +607,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\NewProject\\GeoWebApp\\Abstracts\\Abstracts.csproj",
+      "projectUniqueName": "D:\\NewProject\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj",
       "projectName": "Abstracts",
-      "projectPath": "D:\\NewProject\\GeoWebApp\\Abstracts\\Abstracts.csproj",
+      "projectPath": "D:\\NewProject\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj",
       "packagesPath": "C:\\Users\\Khanh Tuong\\.nuget\\packages\\",
-      "outputPath": "D:\\NewProject\\GeoWebApp\\Abstracts\\obj\\",
+      "outputPath": "D:\\NewProject\\GeoWebApp\\GeoWebApp\\Abstracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Khanh Tuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
