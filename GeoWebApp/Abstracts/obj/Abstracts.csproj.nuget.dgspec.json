@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NewProject\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj": {}
+    "D:\\Work\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj": {}
   },
   "projects": {
-    "D:\\NewProject\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj": {
+    "D:\\Work\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NewProject\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj",
+        "projectUniqueName": "D:\\Work\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj",
         "projectName": "Abstracts",
-        "projectPath": "D:\\NewProject\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj",
-        "packagesPath": "C:\\Users\\Khanh Tuong\\.nuget\\packages\\",
-        "outputPath": "D:\\NewProject\\GeoWebApp\\GeoWebApp\\Abstracts\\obj\\",
+        "projectPath": "D:\\Work\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj",
+        "packagesPath": "C:\\Users\\realk\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\GeoWebApp\\GeoWebApp\\Abstracts\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Khanh Tuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\realk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -69,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
