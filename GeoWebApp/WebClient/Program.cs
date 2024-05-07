@@ -40,6 +40,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
-Console.WriteLine("Sending test email");
-await RegisterModel.SendEmailAsync("Votuongpro2017@gmail.com", "test", "test");
+//Console.WriteLine("Sending test email");
+//await RegisterModel.SendEmailAsync("Tuongvkce161108@fpt.edu.vn", "test", "test");
 app.Run();
