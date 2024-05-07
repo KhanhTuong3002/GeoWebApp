@@ -175,19 +175,22 @@ namespace WebClient.Areas.Identity.Pages.Account
                 MailMessage message = new MailMessage();
                 SmtpClient smtpClient = new SmtpClient();
                // message.From = new MailAddress("AIAIYan@yandex.com");
-                message.From = new MailAddress("Votuongpro@yandex.com");
+               // message.From = new MailAddress("Votuongpro@yandex.com");
+                message.From = new MailAddress("khanhtuongadminsp24@geotycoonclient.se");
                 message.To.Add(email);
                 message.Subject = subject;
                 message.IsBodyHtml = true;
                 message.Body = confirmLink;
 
                 smtpClient.Port = 587;
-                smtpClient.Host = "smtp.yandex.com";
+                //smtpClient.Host = "smtp.yandex.com";
+                smtpClient.Host = "smtp.simply.com";
 
                 smtpClient.EnableSsl = true;
                 smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential("Votuongpro", "treuaefycjlhuceg");
+                //smtpClient.Credentials = new NetworkCredential("Votuongpro", "treuaefycjlhuceg");
                // smtpClient.Credentials = new NetworkCredential("AIAIYan","btmfzuuiinntzcou");
+                smtpClient.Credentials = new NetworkCredential("khanhtuongadminsp24@geotycoonclient.se", "Kojlakothe29");
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtpClient.Send(message);
                 return true;
