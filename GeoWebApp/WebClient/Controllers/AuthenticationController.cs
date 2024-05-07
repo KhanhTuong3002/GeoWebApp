@@ -26,8 +26,10 @@ public class AuthController : ControllerBase
 
         };
 
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("SecretKey"));
-        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        //var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("SecretKey"));
+        var key = new SymmetricSecurityKey(KeyGenerator.GenerateSecretKey(512));
+        //var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
         var token = new JwtSecurityToken(
             claims: claims,
@@ -37,4 +39,5 @@ public class AuthController : ControllerBase
 
         return Ok(new JwtSecurityTokenHandler().WriteToken(token));
     }
+    
 }

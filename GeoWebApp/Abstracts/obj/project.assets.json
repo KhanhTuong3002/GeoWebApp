@@ -602,24 +602,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\realk\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\nhatn\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj",
+      "projectUniqueName": "D:\\SCHOOL WORK\\2024\\SU24\\GIT FOLDER\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj",
       "projectName": "Abstracts",
-      "projectPath": "D:\\Work\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj",
-      "packagesPath": "C:\\Users\\realk\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\GeoWebApp\\GeoWebApp\\Abstracts\\obj\\",
+      "projectPath": "D:\\SCHOOL WORK\\2024\\SU24\\GIT FOLDER\\GeoWebApp\\GeoWebApp\\Abstracts\\Abstracts.csproj",
+      "packagesPath": "C:\\Users\\nhatn\\.nuget\\packages\\",
+      "outputPath": "D:\\SCHOOL WORK\\2024\\SU24\\GIT FOLDER\\GeoWebApp\\GeoWebApp\\Abstracts\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\realk\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\nhatn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -627,7 +622,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -680,7 +674,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

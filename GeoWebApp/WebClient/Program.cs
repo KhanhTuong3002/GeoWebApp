@@ -5,6 +5,7 @@ using WebClient.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Security.Cryptography;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,9 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+var secretKeyBytes = KeyGenerator.GenerateSecretKey(512);
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -28,7 +32,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateAudience = false,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]))
+            //IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]))
+            IssuerSigningKey = new SymmetricSecurityKey(secretKeyBytes)
         };
     });
 
@@ -62,3 +67,16 @@ app.MapRazorPages();
 //Console.WriteLine("Sending test email");
 //await RegisterModel.SendEmailAsync("Tuongvkce161108@fpt.edu.vn", "test", "test");
 app.Run();
+
+public class KeyGenerator
+{
+    public static byte[] GenerateSecretKey(int keySizeInBits)
+    {
+        using (var randomNumberGenerator = new RNGCryptoServiceProvider())
+        {
+            byte[] randomNumber = new byte[keySizeInBits / 8];
+            randomNumberGenerator.GetBytes(randomNumber);
+            return randomNumber;
+        }
+    }
+}
