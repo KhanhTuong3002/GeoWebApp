@@ -167,7 +167,7 @@ namespace WebClient.Areas.Identity.Pages.Account
             // If we got this far, something failed, redisplay form
             return Page();
         }
-
+        //send email feature
         public static async Task<bool> SendEmailAsync(string email, string subject, string confirmLink)
         {
             try
@@ -189,7 +189,7 @@ namespace WebClient.Areas.Identity.Pages.Account
                 smtpClient.EnableSsl = true;
                 smtpClient.UseDefaultCredentials = false;
                 //smtpClient.Credentials = new NetworkCredential("Votuongpro", "treuaefycjlhuceg");
-               // smtpClient.Credentials = new NetworkCredential("AIAIYan","btmfzuuiinntzcou");
+                // smtpClient.Credentials = new NetworkCredential("AIAIYan","btmfzuuiinntzcou");
                 smtpClient.Credentials = new NetworkCredential("khanhtuongadminsp24@geotycoonclient.se", "Kojlakothe29");
                 smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtpClient.Send(message);
