@@ -1,4 +1,7 @@
-﻿namespace AuthenticationAPI.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace AuthenticationAPI.Models
+
 {
     public class UserModel
     {

@@ -18,7 +18,7 @@ public class AuthController(Microsoft.AspNetCore.Identity.UserManager<UserModel>
 {
     private Microsoft.AspNetCore.Identity.UserManager<UserModel> UserManager { get; } = userManager;
 
-    [HttpPost("login")]
+    //[HttpPost("login")]
     //public IActionResult Login([FromBody] UserModel loginUser)
     //{
     //    // Thực hiện xác thực người dùng, ví dụ kiểm tra tên đăng nhập và mật khẩu
@@ -49,24 +49,40 @@ public class AuthController(Microsoft.AspNetCore.Identity.UserManager<UserModel>
     //}
 
     [HttpPost("login")]
-    [Authorize]
     public async Task<ActionResult> Authen(UserModel loginUser)
     {
-        string role = (await UserManager.GetRolesAsync(loginUser)).ToString();
-        return Ok(GenerateToken(loginUser,role));
+        // Find user by email
+        var user = await UserManager.FindByEmailAsync(loginUser.Email);
+        if (user == null)
+        {
+            // User not found
+            return Unauthorized("Invalid email or password.");
+        }
+
+        // Check if the password is correct
+        var isValidPassword = await UserManager.CheckPasswordAsync(user, loginUser.Password);
+        if (!isValidPassword)
+        {
+            // Invalid password
+            return Unauthorized("Invalid email or password.");
+        }
+
+        // Authentication successful, generate token
+        var role = await UserManager.GetRolesAsync(user);
+        return Ok(GenerateToken(loginUser, role));
     }
 
-    private string GenerateToken(UserModel user, string role)
+    private string GenerateToken(UserModel user, IList<String> roles)
     {
-        var claims = new[]
+        var claims = new List<Claim>
         {
             new Claim(ClaimTypes.NameIdentifier, "1"), // ID
             new Claim(ClaimTypes.Name, "Khang"), // UserName
             new Claim(ClaimTypes.Email, user.Email), // Email
-            new Claim(ClaimTypes.Role, role), // Role
             new Claim(JwtRegisteredClaimNames.Exp, new DateTimeOffset(DateTime.UtcNow.AddHours(1)).ToUnixTimeSeconds().ToString()) // Thời gian hết hạn
 
         };
+        claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("SecretKey"));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
