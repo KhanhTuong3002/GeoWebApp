@@ -1,7 +1,6 @@
 ﻿namespace AuthenticationAPI.Controllers;
 
 using AuthenticationAPI.Models;
-using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
