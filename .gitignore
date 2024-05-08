@@ -287,3 +287,8 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+GeoWebApp/WebClient/obj/Debug/net8.0/WebClient.AssemblyInfoInputs.cache
+GeoWebApp/Abstracts/obj/Debug/net8.0/Abstracts.AssemblyInfo.cs
+GeoWebApp/Abstracts/obj/Debug/net8.0/Abstracts.AssemblyInfoInputs.cache
+GeoWebApp/WebClient/obj/Debug/net8.0/WebClient.AssemblyInfo.cs
+GeoWebApp/WebClient/obj/Debug/net8.0/WebClient.AssemblyInfoInputs.cache
